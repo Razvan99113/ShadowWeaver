@@ -6,6 +6,8 @@ import yt_dlp
 import datetime
 from PIL import Image, ImageDraw, ImageFont
 import io
+import os
+import webserver
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -695,5 +697,6 @@ async def help(ctx):
     except discord.errors.Forbidden:
         await ctx.send("Ce pula mea vrei ajutor daca nu vrei sa ti scrie lumea")
 
-TOKEN = "MTIzODUwOTc2MTE1MDg0OTA4NQ.GlfGZs.jlBrMJXhbZnBMzK-vz0cmnlWSrH1En17R9DYUY"
+TOKEN = os.environ['discordkey']
+webserver.keep_alive()
 bot.run(TOKEN)
