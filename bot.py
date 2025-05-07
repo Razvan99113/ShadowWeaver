@@ -62,7 +62,7 @@ bot.remove_command("help")
 
 async def log_every_14_minutes():
     while True:
-        print('I'M STILL STANDING.')
+        print("I'M STILL STANDING.")
         await asyncio.sleep(14 * 60)
 
 def is_allowed_channel(ctx):
