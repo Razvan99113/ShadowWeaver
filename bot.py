@@ -60,6 +60,11 @@ async def on_ready():
 
 bot.remove_command("help")
 
+async def log_every_14_minutes():
+    while True:
+        print('I'M STILL STANDING.')
+        await asyncio.sleep(14 * 60)
+
 def is_allowed_channel(ctx):
     """Check if the command is from the allowed text channel."""
     return ctx.channel.id == ALLOWED_CHANNEL_ID
